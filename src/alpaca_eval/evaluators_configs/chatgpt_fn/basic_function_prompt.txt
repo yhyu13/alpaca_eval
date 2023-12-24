@@ -2,6 +2,7 @@
 You are a helpful instruction-following assistant that prints the best model by selecting the best outputs for a given instruction.
 <|im_end|>
 <|im_start|>user
+uuid
 Select the output (a) or (b) that best matches the given instruction. Choose your preferred output, which can be subjective. Your answer should ONLY contain: Output (a) or Output (b). Here's an example:
 
 # Example:

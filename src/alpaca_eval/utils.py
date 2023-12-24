@@ -19,6 +19,7 @@ import pandas as pd
 import pkg_resources
 import tqdm
 import yaml
+import uuid
 
 from . import constants
 
@@ -150,6 +151,7 @@ def make_prompts(
             for to_format in n_occurrences.keys():
                 # replace only first occurrence (that's why we don't use .format)
                 current_prompt = current_prompt.replace("{" + to_format + "}", str(df_out.iloc[i + j][to_format]), 1)
+                current_prompt = current_prompt.replace("uuid", str(uuid.uuid4()), 1)
         prompts.append(current_prompt)
 
     return prompts, df_out
